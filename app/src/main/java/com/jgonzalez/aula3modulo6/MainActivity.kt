@@ -30,12 +30,9 @@ class MainActivity : AppCompatActivity() {
     private fun setupButton(button1: Button, button2: Button) {
 
         button1.setOnClickListener {
-            try {
                 Navigation.findNavController(this, R.id.nav_host_fragment)
                     .navigate(R.id.action_secondFragment_to_homeFragment)
-            } catch (e: Exception) {
-                Log.e("Erro de Navegação", e.message.toString())
-            }
+
         }
 
         button2.setOnClickListener {
